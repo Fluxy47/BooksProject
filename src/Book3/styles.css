@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  color: #a1a1aa;
+}
+
+.bg__gradient {
+  height: 100vh;
+  width: 10vw;
+  overflow: hidden;
+  margin: 0;
+  position: absolute;
+  background-image: linear-gradient(
+    90deg,
+    #eb3434,
+    #eb5e34,
+    #eb8334,
+    #eba434,
+    #ebcc34,
+    #ebeb34,
+    #c3eb34,
+    #89eb34,
+    #58eb34,
+    #34eb52,
+    #34ebcc,
+    #34d5eb,
+    #34a8eb,
+    #346beb,
+    #3734eb,
+    #7734eb,
+    #a834eb,
+    #eb34c3,
+    #eb3489,
+    #eb3461
+  );
+  filter: blur(500px);
+  border-radius: 100%;
+
+  animation: gradient 10s infinite ease-out;
+
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+
+  z-index: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Your other global styles here */
+
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+  grid-gap: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card styles */
+.card {
+  background-color: #1c1c1f;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05), 0px 8px 15px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 56px 16px 16px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: box-shadow 0.25s;
+  will-change: transform, opacity; /* Apply will-change */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+.card p {
+  z-index: 2;
+  position: relative;
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.card .background {
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(
+    circle at 60% 5%,
+    black 0%,
+    black 15%,
+    transparent 60%
+  );
+  mask-image: radial-gradient(
+    circle at 60% 5%,
+    black 0%,
+    black 15%,
+    transparent 60%
+  );
+}
+
+.card .background .tiles {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.card .background .tiles .tile {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.card .background .tiles .tile.tile-4,
+.card .background .tiles .tile.tile-6,
+.card .background .tiles .tile.tile-10 {
+  transition-delay: -0.2s;
+}
+
+.card .background .tiles .tile.tile-3,
+.card .background .tiles .tile.tile-5,
+.card .background .tiles .tile.tile-8 {
+  transition-delay: -0.4s;
+}
+
+.card .background .tiles .tile.tile-2,
+.card .background .tiles .tile.tile-9 {
+  transition-delay: -0.6s;
+}
+
+.card .background .tiles .tile.tile-1 {
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 22.5%;
+}
+
+.card .background .tiles .tile.tile-2 {
+  top: 0;
+  left: 22.5%;
+  height: 10%;
+  width: 27.5%;
+}
+
+.card .background .tiles .tile.tile-3 {
+  top: 0;
+  left: 50%;
+  height: 10%;
+  width: 27.5%;
+}
+
+.card .background .tiles .tile.tile-4 {
+  top: 0;
+  left: 77.5%;
+  height: 10%;
+  width: 22.5%;
+}
+
+.card .background .tiles .tile.tile-5 {
+  top: 10%;
+  left: 0;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+.card .background .tiles .tile.tile-6 {
+  top: 10%;
+  left: 22.5%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.card .background .tiles .tile.tile-7 {
+  top: 10%;
+  left: 50%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.card .background .tiles .tile.tile-8 {
+  top: 10%;
+  left: 77.5%;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+.card .background .tiles .tile.tile-9 {
+  top: 32.5%;
+  left: 50%;
+  height: 22.5%;
+  width: 27.5%;
+}
+
+.card .background .tiles .tile.tile-10 {
+  top: 32.5%;
+  left: 77.5%;
+  height: 22.5%;
+  width: 22.5%;
+}
+
+.card .background .line {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.card .background .line:before,
+.card .background .line:after {
+  content: "";
+  position: absolute;
+  background-color: #2a2b2c;
+  transition: transform 0.35s;
+}
+
+.card .background .line:before {
+  left: 0;
+  right: 0;
+  height: 1px;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+}
+
+.card .background .line:after {
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform-origin: 50% 0;
+  transform: scaleY(0);
+}
+
+.card .background .line.line-1:before {
+  top: 10%;
+}
+
+.card .background .line.line-1:after {
+  left: 22.5%;
+}
+
+.card .background .line.line-1:before,
+.card .background .line.line-1:after {
+  transition-delay: 0.3s;
+}
+
+.card .background .line.line-2:before {
+  top: 32.5%;
+}
+
+.card .background .line.line-2:after {
+  left: 50%;
+}
+
+.card .background .line.line-2:before,
+.card .background .line.line-2:after {
+  transition-delay: 0.15s;
+}
+
+.card .background .line.line-3:before {
+  top: 55%;
+}
+
+.card .background .line.line-3:after {
+  right: 22.5%;
+}
+
+.card:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.04), 0px 5px 10px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.card .background .tiles {
+  opacity: 1;
+  transition-delay: 0.25s;
+}
+
+.card:hover .background .tiles .tile {
+  opacity: 1;
+}
+
+.card:hover .background .line {
+  opacity: 1;
+  transition-duration: 0.15s;
+}
+
+.card:hover .background .line:before {
+  transform: scaleX(1);
+}
+
+.card:hover .background .line:after {
+  transform: scaleY(1);
+}
+
+.card:hover .background .line.line-1:before,
+.card:hover .background .line.line-1:after {
+  transition-delay: 0s;
+}
+
+.card:hover .background .line.line-2:before,
+.card:hover .background .line.line-2:after {
+  transition-delay: 0.15s;
+}
+
+.card:hover .background .line.line-3:before,
+.card:hover .background .line.line-3:after {
+  transition-delay: 0.3s;
+}
+
+.card2 {
+  background: #2f2f2f;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card2:hover::before {
+  opacity: 1;
+}
+
+.card2::before {
+  content: "";
+  background: linear-gradient(45deg, transparent, #777777, transparent);
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0;
+
+  transition: opacity 300ms;
+}
+
+@property --gradient-stop {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+
+@property --gradient-stop-two {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+
+.card2:nth-child(2)::before {
+  background: linear-gradient(
+    45deg,
+    transparent var(--gradient-stop),
+    red var(--gradient-stop),
+    #330a0a var(--gradient-stop-two),
+    #330a0a var(--gradient-stop-two)
+  );
+
+  transition-property: --gradient-stop, --gradient-stop-two;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.card2:nth-child(2):hover::before {
+  --gradient-stop: 0%;
+  --gradient-stop-two: 100%;
+}
