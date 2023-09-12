@@ -24,17 +24,10 @@ function App() {
   const location = useLocation();
 
   const [isVisible, setIsVisible] = useState(true);
-  console.log("mah:", isVisible);
+
   useEffect(() => {
     const currentURL = location.pathname;
-    console.log(currentURL);
-
-    // Add any URL or page condition to hide the div
-    if (currentURL === "/navigation") {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true); // Ensure visibility is set to true for other URLs
-    }
+    setIsVisible(currentURL !== "/navigation" && currentURL !== "/");
   }, [location.pathname]);
   return (
     <main className="min-h-screen bg-[#292929]">

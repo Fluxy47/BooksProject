@@ -10,7 +10,7 @@ import "./styles.css";
 
 //#FDDEDE
 
-function Landing() {
+function Landing({ singleElementControls }) {
   return (
     <motion.div
       layoutId="Main-Image4"
@@ -18,17 +18,24 @@ function Landing() {
       className="hero"
     >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        initial={{ left: "50%" }}
+        animate={singleElementControls}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        className="fixed  top-1/2 -translate-x-1/2 -translate-y-1/2"
       >
-        <div className="text-[#c9b2a6] text-[35px] text-center ">
-          Mindset: The New Psychology of Success
-        </div>
-        <p className="text-[1.5em] text-center text-[#c9b2a6]">
-          Unlock Your Potential: Embrace a Growth Mindset for Success.
-        </p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          // className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <div className="text-[#c9b2a6] text-[35px] text-center ">
+            Mindset: The New Psychology of Success
+          </div>
+          <p className="text-[1.5em] text-center text-[#c9b2a6]">
+            Unlock Your Potential: Embrace a Growth Mindset for Success.
+          </p>
+        </motion.div>
       </motion.div>
       <div className="cube" />
       <div className="cube" />

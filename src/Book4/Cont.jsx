@@ -6,8 +6,16 @@ import book1 from "../assets/book1.jpg";
 import book2 from "../assets/book2.jpg";
 import book3 from "../assets/book3.jpg";
 import book4 from "../assets/book4.jpg";
+import { useInView } from "react-intersection-observer";
 
-function Cont({ handleImageClick, imageLoaded }) {
+function Cont({
+  handleImageClick,
+  imageLoaded,
+  element1Ref,
+  element2Ref,
+  element3Ref,
+  element4Ref,
+}) {
   const myRef = useRef(null);
   useEffect(() => {
     const images = myRef.current.getElementsByClassName("image2");
@@ -15,7 +23,7 @@ function Cont({ handleImageClick, imageLoaded }) {
   }, []);
 
   return (
-    <div className="h-auto w-full bg-[#C9B2A6] z-50 " data-scroll-section>
+    <div className="h-auto w-full  z-50 " data-scroll-section>
       <div
         className=" grid grid-cols-1  lg:grid-cols-3  w-full h-auto "
         ref={myRef}
@@ -31,6 +39,7 @@ function Cont({ handleImageClick, imageLoaded }) {
             //md:mt-[60em]
           >
             <motion.img
+              ref={element1Ref}
               src="https://ik.imagekit.io/fluxy/DesignProject/book1.jpg?tr=w-800"
               className="image2 h-[70vh]  w-full  rounded-[25px] object-cover"
               //mt-[70em] mb-[70em]
@@ -46,6 +55,7 @@ function Cont({ handleImageClick, imageLoaded }) {
             data-custom="2"
           >
             <motion.img
+              ref={element3Ref}
               src="https://ik.imagekit.io/fluxy/DesignProject/book2.jpg?tr=w-800"
               className="image2 h-[70vh] w-full rounded-[25px]"
               //mt-0 mb-[110em]
@@ -61,6 +71,7 @@ function Cont({ handleImageClick, imageLoaded }) {
             data-custom="3"
           >
             <motion.img
+              ref={element2Ref}
               src="https://ik.imagekit.io/fluxy/DesignProject/book3.jpg?tr=w-800"
               className="image2 h-[70vh] w-[100vw] rounded-[25px]"
               //mt-[40em] mb-[30em]
@@ -74,6 +85,7 @@ function Cont({ handleImageClick, imageLoaded }) {
             data-custom="4"
           >
             <motion.img
+              ref={element4Ref}
               src="https://ik.imagekit.io/fluxy/DesignProject/book4.jpg?tr=w-800"
               className="image2 h-[70vh] w-[100vw] rounded-[25px]"
             />
