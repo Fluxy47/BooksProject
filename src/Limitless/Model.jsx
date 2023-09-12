@@ -3,6 +3,7 @@ import model from "../assets/model.png";
 import { motion } from "framer-motion";
 import { Mtext, MHeading, MImage } from "./Animation";
 import { useScroll } from "../utils/UseScroll";
+import Svg from "./Svg";
 
 function Model() {
   const [element, controls] = useScroll();
@@ -22,7 +23,8 @@ function Model() {
             ease: [0.43, 0.13, 0.23, 0.96], // Custom easing function (easeInOut)
           }}
         >
-          <img src={model} className="w-full h-[80%] " />
+          {/* <img src={model} className="w-full h-[80%] " /> */}
+          <Svg />
         </motion.div>
         <div className=" w-full lg:w-3/5">
           <motion.h1

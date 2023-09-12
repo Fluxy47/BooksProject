@@ -8,7 +8,7 @@ function Banner() {
       <motion.div
         exit={{ opacity: 0 }}
         data-scroll-section
-        className=" bg-black h-screen rounded-[25px]"
+        className=" bg-black h-screen rounded-xl"
         layoutId="Main-Image2"
         transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.6 }}
       >

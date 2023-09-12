@@ -69,7 +69,7 @@ function Navigation() {
                 layoutId="Main-Image2"
                 onClick={handleClick2}
                 transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.6 }}
-                className=" w-[100vw] md:w-[30vw] h-[30vh]  cursor-pointer bg-black rounded-[25px] mt-5 mb-[20vh] md:mb-0"
+                className=" w-[100vw] md:w-[30vw] h-[30vh]  cursor-pointer bg-black rounded-xl mt-5 mb-[20vh] md:mb-0"
               />
               <motion.h1
                 exit={{ opacity: 0 }}
@@ -93,7 +93,7 @@ function Navigation() {
               <motion.div
                 layoutId="Main-Image3"
                 onClick={handleClick3}
-                className="w-[100vw] md:w-[30vw] h-[30vh] bg-gradient-to-b from-[#361b34] to-[#03051a] flex-none cursor-pointer rounded-[25px]  md:mb-0"
+                className="w-[100vw] md:w-[30vw] h-[30vh] bg-gradient-to-b from-[#361b34] to-[#03051a] flex-none cursor-pointer rounded-xl  md:mb-0"
                 transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.6 }}
               />
               <motion.h1
@@ -119,7 +119,7 @@ function Navigation() {
               <motion.div
                 layoutId="Main-Image1"
                 onClick={handleClick}
-                className="relative z-20 h-[40vh] md:w-[40vw] w-[100vw]  lg:ml-0 md:mt-[40px] lg:mt-0 bg-black cursor-pointer rounded-[25px] "
+                className="relative z-20 h-[40vh] md:w-[40vw] w-[100vw]  lg:ml-0 md:mt-[40px] lg:mt-0 bg-black cursor-pointer rounded-xl "
               />
               <motion.h1
                 exit={{ opacity: 0 }}
@@ -146,7 +146,7 @@ function Navigation() {
                 onClick={handleClick4}
                 layoutId="Main-Image4"
                 transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.6 }}
-                className="w-[100vw] md:w-[30vw] h-[30vh] bg-[#0044cc] flex-none cursor-pointer rounded-[25px] mt-5 mb-[20vh] md:mb-0"
+                className="w-[100vw] md:w-[30vw] h-[30vh] bg-[#0044cc] flex-none cursor-pointer rounded-xl mt-5 mb-[20vh] md:mb-0"
               />
               <motion.h1
                 exit={{ opacity: 0 }}
@@ -170,7 +170,7 @@ function Navigation() {
               <motion.div
                 onClick={handleClick5}
                 layoutId="Main-Image5"
-                className=" w-[100vw] md:w-[30vw] h-[30vh] gradient1  flex-none cursor-pointer rounded-[25px] "
+                className=" w-[100vw] md:w-[30vw] h-[30vh] gradient1  flex-none cursor-pointer rounded-xl "
               />
               <motion.h1
                 exit={{ opacity: 0 }}

@@ -4,6 +4,7 @@ import { TemArr } from "../utils/constant";
 import { AnimatePresence, motion } from "framer-motion";
 import Modal from "./Modal";
 import { Blurhash } from "react-blurhash";
+import ImageWithPlaceholder from "./ImageWithPlaceholder";
 
 function NavCont() {
   const [selected, setSelected] = useState(null);
@@ -150,21 +151,12 @@ function NavCont() {
       // Reset isHoveredLongEnough to false after the animation is displayed
     }
   }, [isHoveredLongEnough]);
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const blurhash = "LEHV6nWB2yk8pyo0adR*.7kCMdnj";
-  const width = 400;
-  const height = 300;
-
-  const handleImageLoad = () => {
-    // Update the state to indicate that the image has loaded
-    setImageLoaded(true);
-  };
 
   return (
     <motion.div
       layoutId="Main-Image3"
       transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.4, delay: 0.4 }}
-      className="h-screen w-screen absolute bg-gradient-to-b from-[#361b34] to-[#03051a] overflow-hidden m-0 rounded-[25px]"
+      className="h-screen w-screen absolute bg-gradient-to-b from-[#361b34] to-[#03051a] overflow-hidden m-0 rounded-xl"
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -198,24 +190,12 @@ function NavCont() {
                 onMouseEnter={() => handleHover(index)}
                 onMouseLeave={handleHoverEnd}
               >
-                {!imageLoaded && (
-                  <Blurhash
-                    hash="LEHV6nWB2yk8pyo0adR*.7kCMdnj"
-                    width="40vmin"
-                    height="56vmin"
-                    resolutionX={32}
-                    resolutionY={32}
-                    punch={1}
-                  />
-                )}
-                <motion.img
+                <img
+                  src={item.src}
                   className="image"
                   style={{
                     imageRendering: "auto",
-                    display: imageLoaded ? "block" : "none",
                   }}
-                  src={item.src}
-                  onLoad={handleImageLoad}
                 />
                 <AnimatePresence mode="sync">
                   {hoveredIndex === index && showText && (

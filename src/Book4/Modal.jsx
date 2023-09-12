@@ -59,27 +59,18 @@ function Modal({ selectedImage, setSelectedImage }) {
       break;
     case 2:
       contentToRender = (
-        <motion.div
-          className="fixed z-10 flex h-screen w-full items-center justify-center "
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
+        <div className="fixed z-10 flex h-screen w-full items-center justify-center ">
           <h1 className="text-center absolute  top-0 left-1/2 -translate-x-1/2 text-black text-[2em] md:text-[2em] lg:text-[3em] font-semibold ">
             Growth Mindeset
           </h1>
           <div className="flex  max-h-screen   w-full items-center justify-center gap-[5px] md:gap-[40px] lg:gap-[10vh] overflow-x-auto pt-[15vh]">
             <div className="lg:hidden min-w-[200vw] md:min-w-[90vw] h-[400px]" />
-            <div className="bg-[#440204] min-w-full md:min-w-[50%] lg:min-w-0  lg:w-[28%] md:h-[60vh]  h-[350px]">
+            <div className="bg-[#440204] min-w-full md:min-w-[50%] lg:min-w-0  lg:w-[28%]   h-[500px]">
               {" "}
               <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black  font-bold">
                 Definition & Approach to Success
               </h1>
-              <p
-                style={{ fontSize: "clamp(16px,6vmin,20px)" }}
-                className="mx-2 text-center text-[#323232] font-semibold"
-              >
+              <p className="mx-2 text-[1.5em] text-center text-[#323232] font-semibold">
                 People with a growth mindset focus on learning and stretching
                 themselves. There’s nothing wrong with building self-confidence
                 and belief. The danger comes when you feel you’re entitled to
@@ -87,88 +78,66 @@ function Modal({ selectedImage, setSelectedImage }) {
                 self-worth by your achievements.
               </p>
             </div>
-            <div className="bg-[#440204] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] md:h-[60vh] h-[350px]">
+            <div className="bg-[#440204] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] h-[500px]">
               <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black font-semibold">
                 Definition & Approach to Failure
               </h1>
-              <p
-                style={{ fontSize: "clamp(16px,6vmin,20px)" }}
-                className="mx-2   text-center  text-[#323232] font-semibold"
-              >
+              <p className="mx-2  text-[1.5em] text-center  text-[#323232] font-semibold">
                 People with a growth mindset may also feel upset, but they see
                 the mistake as an incident and a problem to be overcome (“I
                 failed this time”). They try to identify their shortfalls,
                 confront the challenges, and seek alternative routes to success.
               </p>
             </div>{" "}
-            <div className="bg-[#440204] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] md:h-[60vh] h-[350px]">
+            <div className="bg-[#440204] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] h-[500px]">
               <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black  font-semibold">
                 Attitude toward Effort
               </h1>
-              <p
-                style={{ fontSize: "clamp(16px,6vmin,20px)" }}
-                className="mx-2   text-center text-[#323232] font-semibold"
-              >
+              <p className="mx-2  text-[1.5em] text-center text-[#323232] font-semibold">
                 People with a growth mindset are driven by their passion for
                 excellence, and end up winning as a result of their growth.
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       );
 
       break;
     case 3:
       contentToRender = (
-        <motion.div
-          className="fixed z-10 flex h-screen w-full items-center justify-center "
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
+        <div className="fixed z-10 flex h-screen w-full items-center justify-center ">
           <h1 className="text-center absolute  top-0 left-1/2 -translate-x-1/2 text-black text-[2em] md:text-[2em] lg:text-[3em] font-semibold ">
-            Fixed Mindeset
+            Growth Mindeset
           </h1>
           <div className="flex  max-h-screen   w-full items-center justify-center gap-[5px] md:gap-[40px] lg:gap-[10vh] overflow-x-auto pt-[15vh]">
             <div className="lg:hidden min-w-[200vw] md:min-w-[90vw] h-[400px]" />
-            <div className="bg-[#BF8F4C] min-w-full md:min-w-[50%] lg:min-w-0  lg:w-[28%] md:h-[60vh] h-[350px]">
+            <div className="bg-[#BF8F4C] min-w-full md:min-w-[50%] lg:min-w-0  lg:w-[28%]   h-[450px]">
               {" "}
-              <h1 className="text-[1.5em] text-center text-black  font-bold">
+              <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black  font-bold">
                 Definition & Approach to Success
               </h1>
-              <p
-                style={{ fontSize: "clamp(16px,6vmin,20px)" }}
-                className="mx-2   text-center text-[#323232] font-semibold"
-              >
+              <p className="mx-2 text-[1.5em] text-center text-[#323232] font-semibold">
                 People with a fixed mindset believe their abilities are fixed,
                 thus they prefer to stay in their comfort zone and focus on
                 validating and proving themselves.
               </p>
             </div>
-            <div className="bg-[#BF8F4C] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] md:h-[60vh] h-[350px]">
-              <h1 className="text-[1.5em] text-center text-black  font-semibold">
+            <div className="bg-[#BF8F4C] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] h-[450px]">
+              <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black font-semibold">
                 Definition & Approach to Failure
               </h1>
-              <p
-                style={{ fontSize: "clamp(16px,6vmin,20px)" }}
-                className="mx-2   text-center  text-[#323232] font-semibold"
-              >
-                When things go wrong, everyone feels bad to some degree. The
-                difference is in how they respond. People with a fixed mindset
-                allows the failure to define them permanently (“I’m a failure),
-                give up, or try to protect their image by hiding their
-                deficiencies, finding blame or excuses.{" "}
+              <p className="mx-2  text-[1.5em] text-center  text-[#323232] font-semibold">
+                When things go wrong, everyone feels bad to some degree. People
+                with a fixed mindset allows the failure to define them
+                permanently (“I’m a failure), give up, or try to protect their
+                image by hiding their deficiencies, finding blame or excuses.{" "}
               </p>
             </div>{" "}
-            <div className="bg-[#BF8F4C] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] md:h-[60vh] h-[350px]">
-              <h1 className="text-[1.5em] text-center text-black  font-semibold">
+            <div className="bg-[#BF8F4C] min-w-full lg:min-w-0 md:min-w-[50%] lg:w-[28%] h-[450px]">
+              <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black  font-semibold">
                 Attitude toward Effort
               </h1>
-              <p
-                style={{ fontSize: "clamp(16px,6vmin,20px)" }}
-                className="mx-2   text-center text-[#323232] font-semibold"
-              >
+              <p className="mx-2  text-[1.5em] text-center text-[#323232] font-semibold">
                 People with a fixed mindset tend to resist putting in effort
                 because (a) they believe the need to work harder means they’re
                 not “special” enough, and (b) they’re silently worried that
@@ -176,7 +145,7 @@ function Modal({ selectedImage, setSelectedImage }) {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       );
 
       break;

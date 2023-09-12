@@ -47,36 +47,35 @@ function Modal({
             <h1 className="text-white text-center  text-[2em] pt-[20px] pb-[20px] lg:pb-[15vh]">
               Techniques in Handling People
             </h1>
-            <div className="flex flex-col gap-5 lg:flex-row mt-[calc(2em + 20px)] justify-center items-center">
+            <div className="flex flex-col gap-[10vh] lg:flex-row mt-[calc(2em + 20px)] justify-center items-center">
               {" "}
-              <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em] h-[450px]">
+              <div className="card2 w-[20em] md:w-[40vw] lg:w-[20em] h-[450px]">
                 <h1 className="text-[1.5em] text-center text-[silver] font-semibold mb-[15px]">
                   Don’t criticize, condemn or complain.
                 </h1>
-                <p className="lg:text-[22px] text-center">
-                  Avoid criticizing or condemning others, as it can create
-                  resentment and defensiveness. Similarly, refrain from constant
-                  complaining, as it can have a negative impact on
-                  relationships. Instead, focus on understanding and
-                  constructive communication.
+                <p className="text-[1.5em] text-center">
+                  Avoid condemning others, as it can create resentment and
+                  defensiveness. Similarly, refrain from constant complaining,
+                  as it can have a negative impact on relationships. Instead,
+                  focus on understanding and constructive communication.
                 </p>
               </div>
-              <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em] h-[450px]">
+              <div className="card2 w-[20em] md:w-[40vw] lg:w-[20em] h-[450px]">
                 <h1 className="text-[1.5em] text-center text-[silver] font-semibold mb-[15px]">
                   Give honest and sincere appreciation.
                 </h1>
-                <p className="lg:text-[22px] text-center">
+                <p className="text-[1.5em] text-center">
                   Show genuine appreciation for others' efforts and
                   accomplishments. Recognizing and praising their contributions
                   can boost their self-esteem and strengthen your relationship
                   with them.
                 </p>
               </div>
-              <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em] h-[450px] ">
+              <div className="card2 w-[20em] md:w-[40vw] lg:w-[20em] h-[450px] ">
                 <h1 className="text-[1.5em] text-center text-[silver] font-semibold mb-[15px]">
                   Arouse in the other person an eager want.
                 </h1>
-                <p className="lg:text-[22px] text-center">
+                <p className="text-[1.5em] text-center">
                   {" "}
                   Understand the desires and needs of others, and try to align
                   your requests or ideas with what they genuinely want. When you
@@ -99,32 +98,32 @@ function Modal({
             </h1>
             <div className=" h-auto lg:h-[90vh] w-full flex flex-col">
               <section className="flex gap-5 flex-col lg:flex-row  md:h-[50%] w-full items-center justify-center mb-[20px]">
-                <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em] h-[250px] lg:h-[90%]">
+                <div className="card2 w-[20em] md:w-[50vw] lg:w-[20em] h-[260px] lg:h-[17em]">
                   <h1 className="text-[1.5em] text-center text-black font-semibold">
                     Become genuinely interested in other people.
                   </h1>
-                  <p>
+                  <p className="text-[1.3em] text-center">
                     Show sincere curiosity about others' lives, opinions, and
                     experiences. Listen actively and ask questions to understand
                     and engage with them on a deeper level.
                   </p>
                 </div>
-                <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em] h-[250px] lg:h-[90%]">
+                <div className="card2 w-[20em] md:w-[50vw] lg:w-[20em] h-[260px] lg:h-[17em]">
                   <h1 className="text-[1.5em] text-center text-black font-semibold">
                     Smile
                   </h1>
-                  <p>
+                  <p className="text-[1.3em] text-center">
                     A simple smile can go a long way in making others feel
                     comfortable and welcomed. It conveys warmth and
                     friendliness, making people more receptive to you.
                   </p>
                 </div>
-                <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em]  h-[250px] lg:h-[90%]">
-                  <h1 className="text-[1.4em] text-center text-black font-semibold">
-                    A person’s name is to that person the sweetest and most
-                    important sound in any language:
+                <div className="card2 w-[20em] md:w-[50vw] lg:w-[20em]  h-[260px] lg:h-[17em]">
+                  <h1 className="text-[1.2em] text-center text-black font-semibold">
+                    A person’s name is to that person most important sound in
+                    any language:
                   </h1>
-                  <p>
+                  <p className="text-[1.3em] text-center">
                     Addressing people by their names creates a sense of
                     recognition and importance. It shows that you value and
                     respect them as individuals.
@@ -132,32 +131,32 @@ function Modal({
                 </div>
               </section>
               <section className="flex gap-5 flex-col lg:flex-row  md:h-[50%] w-full items-center justify-center mb-[20px]">
-                <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em]  h-[250px] lg:h-[90%]">
-                  <h1 className="text-[1.5em] text-center text-black font-semibold">
+                <div className="card2 w-[20em] md:w-[50vw] lg:w-[20em]  h-[260px] lg:h-[17em]">
+                  <h1 className="text-[1.4em] text-center text-black font-semibold">
                     Be a good listener. Encourage others to talk about
                     themselves
                   </h1>
-                  <p>
+                  <p className="text-[1.3em] text-center">
                     ractice active listening, giving your full attention to what
                     others are saying. Encourage them to share their thoughts
                     and experiences, as it helps build rapport and trust.
                   </p>
                 </div>
-                <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em]  h-[250px] lg:h-[90%]">
+                <div className="card2 w-[20em] md:w-[50vw] lg:w-[20em]  h-[260px] lg:h-[17em]">
                   <h1 className="text-[1.5em] text-center text-black font-semibold">
                     Talk in terms of the other person’s interests
                   </h1>
-                  <p>
+                  <p className="text-[1.3em] text-center">
                     Tailor your conversations to topics that interest the other
                     person. By discussing subjects that matter to them, you can
                     create a positive and enjoyable interaction.
                   </p>
                 </div>
-                <div className="card2 w-[90vw] md:w-[50vw] lg:w-[20em]  h-[250px] lg:h-[90%]">
-                  <h1 className="text-[1.5em] text-center text-black font-semibold">
+                <div className="card2 w-[20em] md:w-[50vw] lg:w-[20em]  h-[260px] lg:h-[17em]">
+                  <h1 className="text-[1.3em] text-center text-black font-semibold">
                     Make the other person feel important – and do it sincerely
                   </h1>
-                  <p>
+                  <p className="text-[1.3em] text-center">
                     Acknowledge and appreciate the value of others'
                     contributions and efforts. When you make people feel
                     important and valued, they are more likely to respond
@@ -176,12 +175,15 @@ function Modal({
           <h1 className="text-center absolute  top-0 left-1/2 -translate-x-1/2 text-white text-[1.4em] md:text-[2em] font-semibold ">
             Win people to your way of thinking
           </h1>
-          <div className="max-h-[60vh] lg:max-h-screen overflow-y-auto mt-[5em]">
+          <div className="max-h-[60vh]  overflow-y-auto mt-[10vw]">
             {/* Your scrollable content goes here */}
 
             <ul className="text-xl list-disc list-inside">
               {bullets.map((bullet, index) => (
-                <li key={index} className="mb-3 text-white">
+                <li
+                  key={index}
+                  className="mb-3 text-[1.2em] md:text-[1.4em]  text-white"
+                >
                   {bullet}
                 </li>
               ))}
@@ -197,12 +199,15 @@ function Modal({
           <h1 className="text-center absolute  top-0 left-1/2 -translate-x-1/2 text-white text-[1.4em] md:text-[2em] font-semibold ">
             How to Change People Without Arousing Resentment
           </h1>
-          <div className="max-h-[60vh] lg:max-h-screen overflow-y-auto">
+          <div className="max-h-[60vh]  overflow-y-auto mt-[10vw]">
             {/* Your scrollable content goes here */}
 
-            <ul className="text-xl list-disc list-inside mt-[100px] md:mt-[60px]">
+            <ul className="text-xl list-disc list-inside ">
               {bullets2.map((bullet, index) => (
-                <li key={index} className="mb-3 text-white">
+                <li
+                  key={index}
+                  className="mb-3 text-[1.2em] md:text-[1.4em]  text-white"
+                >
                   {bullet}
                 </li>
               ))}
@@ -215,14 +220,15 @@ function Modal({
       contentToRender = null; // Or some default content if none of the cases match
   }
 
-  console.log("current", currentIndex);
+  const [rotation, setRotation] = useState(0);
+  const [rotation2, setRotation2] = useState(0);
 
   const handleRightClick = () => {
-    console.log("sadas");
     setTimeout(() => {
       setSelected(false);
     }, 1000);
     setIsShow(false);
+    setRotation((prevRotation) => prevRotation + 90);
 
     setTimeout(() => {
       if (currentIndex < 5) {
@@ -247,6 +253,7 @@ function Modal({
       setSelected(false);
     }, 1000);
     setIsShow(false);
+    setRotation2((prevRotation) => prevRotation - 90);
     setTimeout(() => {
       if (currentIndex > 1) {
         setCurrentIndex((prevstate) => prevstate - 1);
@@ -288,37 +295,98 @@ function Modal({
           {contentToRender}
         </motion.div>
       </AnimatePresence>
-      <div className="fixed flex   z-10">
-        <motion.button
-          initial={{ letterSpacing: "0.025em" }}
-          whileHover={{ letterSpacing: "0.2em" }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-          className="text-[1.5em] border-none bg-transparent text-black font-bold  "
+      <div className="fixed flex ml-[20px]  z-10">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isShow ? 1 : 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="arrow"
           onClick={handleCLick}
         >
-          Back
-        </motion.button>
+          <div className="arrow-top"></div>
+          <div className="arrow-bottom"></div>
+        </motion.div>
       </div>
-      <motion.button
+
+      <motion.svg
         initial={{ opacity: 0 }}
         animate={{ opacity: isShow ? 1 : 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="text-white fixed left-0 top-1/2 z-50"
         onClick={handleLeftClick}
+        className="fixed left-3 top-1/2 z-20 cursor-pointer"
+        height="40px"
+        id="Layer_1"
+        version="1.1"
+        viewBox="0 0 50 50"
+        width="40px"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        Move Left
-      </motion.button>
-      <motion.button
+        <rect fill="none" height="60" width="60" />
+        <motion.line
+          x1="25"
+          y1="0"
+          x2="25"
+          y2="50"
+          stroke="#fff"
+          strokeWidth="4"
+          animate={{ rotate: rotation2 }}
+          transition={{ duration: 0.8, ease: "anticipate" }}
+        />
+
+        {/* Horizontal Line */}
+        <motion.line
+          x1="0"
+          y1="25"
+          x2="50"
+          y2="25"
+          stroke="#fff"
+          strokeWidth="4"
+          animate={{ rotate: rotation2 }}
+          transition={{ duration: 0.8, ease: "anticipate" }}
+        />
+      </motion.svg>
+      <motion.svg
         initial={{ opacity: 0 }}
         animate={{ opacity: isShow ? 1 : 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="text-white fixed top-1/2 right-0 z-50"
         onClick={handleRightClick}
+        className="fixed right-3 top-1/2 z-20 cursor-pointer"
+        height="40px"
+        id="Layer_1"
+        version="1.1"
+        viewBox="0 0 50 50"
+        width="40px"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
-        Move Right
-      </motion.button>
+        <rect fill="none" height="60" width="60" />
+        <motion.line
+          x1="25"
+          y1="0"
+          x2="25"
+          y2="50"
+          stroke="#fff"
+          strokeWidth="4"
+          animate={{ rotate: rotation }}
+          transition={{ duration: 1, ease: "anticipate" }}
+        />
+
+        {/* Horizontal Line */}
+        <motion.line
+          x1="0"
+          y1="25"
+          x2="50"
+          y2="25"
+          stroke="#fff"
+          strokeWidth="4"
+          animate={{ rotate: rotation }}
+          transition={{ duration: 1, ease: "anticipate" }}
+        />
+      </motion.svg>
     </motion.div>
   );
 }

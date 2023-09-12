@@ -7,11 +7,7 @@ import { motion } from "framer-motion";
 function Lerp() {
   const [element, controls] = useScroll();
   return (
-    <section
-      className="w-full h-auto border-2 border-[red]"
-      ref={element}
-      data-scroll-section
-    >
+    <section className="w-full h-auto " ref={element} data-scroll-section>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

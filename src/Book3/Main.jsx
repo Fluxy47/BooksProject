@@ -18,7 +18,8 @@ function Main() {
   const [currentIndex, setCurrentIndex] = useState(1);
   console.log("sakaka", currentIndex);
   const [selected, setSelected] = useState(false);
-  const [firstButton, setFirstButton] = useState(false);
+  const [rotation, setRotation] = useState(0);
+  const [rotation2, setRotation2] = useState(0);
   const [clickCount, setClickCount] = useState(0);
   const timerRef = useRef(null);
 
@@ -26,17 +27,16 @@ function Main() {
     if (currentIndex < myarr.length) {
       setCurrentIndex(currentIndex + 1);
     }
-    setFirstButton(true);
+    setRotation((prevRotation) => prevRotation + 90);
+
     setFlexboxPosition((prevPosition) => {
       const newPosition = prevPosition - 420;
       return Math.max(-1838, Math.min(-158, newPosition));
     });
 
-    // Increment the clickCount and clear any existing timer
-    setClickCount((prevCount) => prevCount + 1);
     clearTimeout(timerRef.current);
 
-    // Set a new timer for 1 second
+    // // Set a new timer for 1 second
     timerRef.current = setTimeout(() => {
       // Perform the functionality based on the number of clicks
 
@@ -45,15 +45,8 @@ function Main() {
       }, 500);
 
       setTimeout(() => {
-        setFirstButton(false);
-      }, 500);
-
-      setTimeout(() => {
         setSelected(false);
       }, 400);
-
-      // Reset click count after the functionality is executed
-      setClickCount(0);
     }, 1000);
   };
 
@@ -62,16 +55,16 @@ function Main() {
       setCurrentIndex(currentIndex - 1);
     }
 
+    setRotation2((prevRotation) => prevRotation - 90);
+
     setFlexboxPosition((prevPosition) => {
       const newPosition = prevPosition + 420;
       return Math.max(-1838, Math.min(-158, newPosition));
     });
 
-    // Increment the clickCount and clear any existing timer
-    setClickCount((prevCount) => prevCount + 1);
     clearTimeout(timerRef.current);
 
-    // Set a new timer for 1 second
+    // // Set a new timer for 1 second
     timerRef.current = setTimeout(() => {
       // Perform the functionality based on the number of clicks
 
@@ -83,8 +76,7 @@ function Main() {
         setSelected(false);
       }, 500);
 
-      // Reset click count after the functionality is executed
-      setClickCount(0);
+      //Reset click count after the functionality is executed
     }, 1000);
   };
 
@@ -121,7 +113,7 @@ function Main() {
     <motion.div
       layoutId="Main-Image5"
       transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.6 }}
-      className="h-screen w-full gradient overflow-hidden rounded-[25px]"
+      className="h-screen w-full gradient overflow-hidden rounded-xl"
     >
       <motion.div className="h-screen w-screen absolute   overflow-hidden m-0  ">
         <svg
@@ -152,36 +144,8 @@ function Main() {
           <motion.svg
             whileHover={{ scale: 1.05 }}
             onClick={handleLeftClick}
-            className="fixed left-2 z-20 cursor-pointer"
-            height="60px"
-            id="Layer_1"
-            version="1.1"
-            viewBox="0 0 50 50"
-            width="60px"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink"
-          >
-            <rect fill="none" height="60" width="60" />
-            <defs>
-              <style>
-                {`.uuid-77381f68-35b8-4bc0-824f-a852b0f84b43{fill:#fff;}`}
-              </style>
-            </defs>
-            <g id="uuid-d633d9dd-700b-44ca-a07b-8443b15a97a4">
-              <polygon
-                className="uuid-77381f68-35b8-4bc0-824f-a852b0f84b43"
-                points="32 14 32 18 18 18 18 32 14 32 14 18 0 18 0 14 14 14 14 0 18 0 18 14 32 14"
-              />
-            </g>
-          </motion.svg>
-
-          <motion.svg
-            animate={{ rotate: firstButton ? 90 : 0 }}
-            transition={{ duration: 1 }}
-            whileHover={{ scale: 1.05 }}
-            onClick={handleRightClick}
-            className="fixed right-2 z-20 cursor-pointer"
-            height="50px"
+            className="fixed left-3 top-1/2 z-20 cursor-pointer"
+            height="40px"
             id="Layer_1"
             version="1.1"
             viewBox="0 0 50 50"
@@ -190,17 +154,67 @@ function Main() {
             xmlnsXlink="http://www.w3.org/1999/xlink"
           >
             <rect fill="none" height="60" width="60" />
-            <defs>
-              <style>
-                {`.uuid-77381f68-35b8-4bc0-824f-a852b0f84b43{fill:#fff;}`}
-              </style>
-            </defs>
-            <g id="uuid-d633d9dd-700b-44ca-a07b-8443b15a97a4">
-              <polygon
-                className="uuid-77381f68-35b8-4bc0-824f-a852b0f84b43"
-                points="32 14 32 18 18 18 18 32 14 32 14 18 0 18 0 14 14 14 14 0 18 0 18 14 32 14"
-              />
-            </g>
+            <motion.line
+              x1="25"
+              y1="0"
+              x2="25"
+              y2="50"
+              stroke="#fff"
+              strokeWidth="4"
+              animate={{ rotate: rotation2 }}
+              transition={{ duration: 1, ease: "anticipate" }}
+            />
+
+            {/* Horizontal Line */}
+            <motion.line
+              x1="0"
+              y1="25"
+              x2="50"
+              y2="25"
+              stroke="#fff"
+              strokeWidth="4"
+              animate={{ rotate: rotation2 }}
+              transition={{ duration: 1, ease: "anticipate" }}
+            />
+          </motion.svg>
+
+          <motion.svg
+            // animate={{ rotate: firstButton ? 90 : 0 }}
+            transition={{ duration: 1 }}
+            whileHover={{ scale: 1.05 }}
+            onClick={handleRightClick}
+            className="fixed right-3 top-1/2 z-20 cursor-pointer"
+            height="40px"
+            id="Layer_1"
+            version="1.1"
+            viewBox="0 0 50 50"
+            width="40px"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+          >
+            <rect fill="none" height="60" width="60" />
+            <motion.line
+              x1="25"
+              y1="0"
+              x2="25"
+              y2="50"
+              stroke="#fff"
+              strokeWidth="4"
+              animate={{ rotate: rotation }}
+              transition={{ duration: 1, ease: "anticipate" }}
+            />
+
+            {/* Horizontal Line */}
+            <motion.line
+              x1="0"
+              y1="25"
+              x2="50"
+              y2="25"
+              stroke="#fff"
+              strokeWidth="4"
+              animate={{ rotate: rotation }}
+              transition={{ duration: 1, ease: "anticipate" }}
+            />
           </motion.svg>
 
           <AnimatePresence mode="sync">
@@ -211,7 +225,7 @@ function Main() {
             >
               {myarr.map((item, index) => (
                 <motion.div
-                  className="card h-[350px] w-[20em] "
+                  className="card h-[390px] w-[20em] overflow-hidden"
                   key={item.id} // Add key prop to each item
                   layoutId={item.id}
                   transition={{ duration: 0.6, ease: [0.6, 0.01, -0.05, 0.95] }}

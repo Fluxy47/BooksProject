@@ -22,28 +22,58 @@ export const limitarr = [
 
 export const TemArr = [
   {
-    src: arr1min,
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg",
+    srcset: `
+    https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg?tr=w-400 400w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg?tr=w-800 800w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg?tr=w-1200 1200w
+  `,
     id: 1,
+    hash: "L88N2p~T=_r^0i9vEMRkrFM#S2ox",
     text: "Introduction",
   },
   {
-    src: arr2min,
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg",
+    srcset: `
+    https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg?tr=w-400 400w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg?tr=w-800 800w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg?tr=w-1200 1200w
+  `,
     id: 2,
+    hash: "L39Q$z02G,}A3+^Qm-Eg9bt*-VE%",
     text: "Key lessons",
   },
   {
-    src: arr3min,
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg",
+    srcset: `
+    https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg?tr=w-400 400w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg?tr=w-800 800w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg?tr=w-1200 1200w
+  `,
     id: 3,
+    hash: "L3Dl=}0J00~qQ*-;00oz00-p?AM~",
     text: " Habit Loop",
   },
   {
-    src: arr4,
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg",
+    srcset: `
+    https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg?tr=w-400 400w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg?tr=w-800 800w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg?tr=w-1200 1200w
+  `,
     id: 4,
+    hash: "LBB|HS_30000D*9F%M~q9FIUxax[",
     text: "Creating Habits",
   },
   {
-    src: arr5,
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg",
+    srcset: `
+    https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-400 400w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-800 800w,
+    https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-1200 1200w
+  `,
     id: 5,
+    hash: "L6BejkTJ0M030gIq}?%K0N#lX,^%",
     text: "Breaking habits",
   },
 ];

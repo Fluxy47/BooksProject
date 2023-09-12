@@ -47,57 +47,53 @@ function Modal({ selected, clickFunc2, isShow }) {
     case 2:
       // JSX code for case when currentIndex === 0
       contentToRender = (
-        <div className="fixed z-10 flex h-screen w-full items-center justify-center ">
-          <div className="flex  max-h-screen   w-full items-center justify-center lg:gap-[100px] overflow-x-auto ">
-            <div className="lg:hidden min-w-[200vw] h-[400px]" />
-            <div className="bg-[#100B2E] border-2 border-[#A5CC6B] min-w-full lg:min-w-0 lg:w-[28%] h-[60vh]">
+        <div className="fixed z-10 h-screen w-full overflow-y-auto">
+          <div className="flex flex-col ">
+            <h1 className="text-white text-center  text-[2em] pt-[20px] pb-[20px] lg:pb-[8vh]">
+              Techniques in Handling People
+            </h1>
+            <div className="flex flex-col gap-[10vh] lg:flex-row  justify-center items-center">
               {" "}
-              <h1 className="text-[1.5em] text-center text-[silver] font-semibold">
-                Small habits make a big difference
-              </h1>
-              <p
-                style={{ fontSize: "clamp(16px,25vh,20px)" }}
-                className="text-black font-semibold  mx-2"
-              >
-                the idea that small, incremental changes in our daily habits can
-                have a profound and transformative effect on our personal and
-                professional lives. Consistently practicing these small habits
-                reinforces positive identity and ultimately leads to significant
-                long-term improvements.
-              </p>
-            </div>
-            <div className="bg-[#100B2E] border-2 border-[#A5CC6B] min-w-full lg:min-w-0 lg:w-[28%] h-[60vh]">
-              <h1 className="text-[1.5em] text-center text-[silver] font-semibold">
-                Forget about setting goals. Focus on your system instead.
-              </h1>
-              <p
-                style={{ fontSize: "clamp(16px,25vh,18px)" }}
-                className="text-black font-semibold  mx-2"
-              >
-                Rather than fixating on specific outcomes or end goals,
-                individuals should prioritize developing effective systems or
-                processes. By focusing on building robust systems, one can
-                create sustainable and repeatable approaches to achieve desired
-                results. A strong system fosters continuous improvement and
-                adaptability, making it easier to navigate setbacks and maintain
-                progress over the long term.
-              </p>
-            </div>{" "}
-            <div className="bg-[#100B2E] border-2 border-[#A5CC6B] min-w-full lg:min-w-0 lg:w-[28%] h-[60vh]">
-              <h1 className="text-[1.5em] text-center text-[silver] font-semibold">
-                Build identity-based habits
-              </h1>
-              <p
-                style={{ fontSize: "clamp(16px,25vh,20px)" }}
-                className="text-black font-semibold  mx-2"
-              >
-                Building identity-based habits is the concept of aligning our
-                habits with our desired identity or self-image. Rather than
-                focusing solely on the behavior change itself, this approach
-                emphasizes identifying as the type of person who embodies the
-                desired habits. By anchoring habits to our sense of self and
-                values, they become more ingrained and natural.
-              </p>
+              <div className="bg-[#100B2E] border-2 border-[#A5CC6B] w-[20em] md:w-[40vw] lg:w-[20em] h-[500px]">
+                <h1 className="text-[1.5em] text-center text-[silver] font-semibold mb-[15px]">
+                  Small habits make a big difference
+                </h1>
+                <p className="text-[1.3em] text-center">
+                  the idea that small, incremental changes in our daily habits
+                  can have a profound and transformative effect on our personal
+                  and professional lives. Consistently practicing these small
+                  habits reinforces positive identity and ultimately leads to
+                  significant long-term improvements.
+                </p>
+              </div>
+              <div className="bg-[#100B2E] border-2 border-[#A5CC6B] w-[20em] md:w-[40vw] lg:w-[20em] h-[500px]">
+                <h1 className="text-[1.3em] text-center text-[silver] font-semibold mb-[15px]">
+                  Forget about setting goals. Focus on your system instead.
+                </h1>
+                <p className="text-[1.2em] text-center">
+                  Rather than fixating on specific outcomes or end goals,
+                  individuals should prioritize developing effective systems or
+                  processes. By focusing on building robust systems, one can
+                  create sustainable and repeatable approaches to achieve
+                  desired results. A strong system fosters continuous
+                  improvement and adaptability, making it easier to navigate
+                  setbacks and maintain progress over the long term.
+                </p>
+              </div>
+              <div className="bg-[#100B2E] border-2 border-[#A5CC6B] w-[20em] md:w-[40vw] lg:w-[20em] h-[500px] ">
+                <h1 className="text-[1.5em] text-center text-[silver] font-semibold mb-[15px]">
+                  Build identity-based habits
+                </h1>
+                <p className="text-[1.3em] text-center">
+                  {" "}
+                  Building identity-based habits is the concept of aligning our
+                  habits with our desired identity or self-image. Rather than
+                  focusing solely on the behavior change itself, this approach
+                  emphasizes identifying as the type of person who embodies the
+                  desired habits. By anchoring habits to our sense of self and
+                  values, they become more ingrained and natural.
+                </p>
+              </div>
             </div>
           </div>
         </div>

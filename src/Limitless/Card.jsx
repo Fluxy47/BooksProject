@@ -89,7 +89,7 @@ function Card() {
                 }}
                 transition={{ duration: 10, delay: 0.2 }}
                 key={index}
-                className=" md:w-[50%] bg-[#F98948] cursor-pointer border-2 border-[red]"
+                className=" md:w-[50%] h-[400px] bg-[#F98948] cursor-pointer border-2 border-[red]"
                 // style={{
                 //   background: isClicked ? "transparent" : "rgb(31, 41, 55)",
                 // }}
@@ -102,10 +102,12 @@ function Card() {
                   transition={{ duration: 1 }}
                   style={contentStyle}
                 >
-                  <h1 className="text-[1.7em] text-center font-semibold">
+                  <h1 className="text-[1.7em]  text-center font-semibold">
                     {item.heading}
                   </h1>
-                  <p className="text-[1.1em] text-center">{item.text}</p>
+                  <p className="text-[1.3em] lg:text-[1em] text-center">
+                    {item.text}
+                  </p>
                 </motion.div>
               </motion.div>
             );
