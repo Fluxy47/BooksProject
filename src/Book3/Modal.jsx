@@ -14,7 +14,7 @@ function Modal({
     case 1:
       contentToRender = (
         <div className="fixed z-10  h-screen w-full">
-          <div className="flex flex-col mt-[20px]">
+          <div className="flex flex-col mt-[75px] md:mt-70px">
             <h1 className="text-[2em] md:text-[3em] text-center text-white">
               {" "}
               How to Win Friends and Influence People.
@@ -43,7 +43,7 @@ function Modal({
 
       contentToRender = (
         <div className="fixed z-10 h-screen w-full overflow-y-auto">
-          <div className="flex flex-col ">
+          <div className="flex flex-col mt-[75px] md:mt-0 ">
             <h1 className="text-white text-center  text-[2em] pt-[20px] pb-[20px] lg:pb-[15vh]">
               Techniques in Handling People
             </h1>
@@ -92,8 +92,8 @@ function Modal({
     case 3:
       contentToRender = (
         <div className="fixed z-10  h-screen w-full overflow-y-auto lg:overflow-hidden">
-          <section className="flex flex-col justify-evenly">
-            <h1 className="text-white text-[2em] mt-[30px] text-center">
+          <section className="flex flex-col justify-evenly mt-[75px] md:mt-0">
+            <h1 className="text-white text-[2em] mt-[30px] lg:mt-0 text-center">
               Six ways to Make People Like You
             </h1>
             <div className=" h-auto lg:h-[90vh] w-full flex flex-col">
@@ -175,7 +175,7 @@ function Modal({
           <h1 className="text-center absolute  top-0 left-1/2 -translate-x-1/2 text-white text-[1.4em] md:text-[2em] font-semibold ">
             Win people to your way of thinking
           </h1>
-          <div className="max-h-[60vh]  overflow-y-auto mt-[10vw]">
+          <div className="max-h-[60vh]  overflow-y-auto mt-[8em]">
             {/* Your scrollable content goes here */}
 
             <ul className="text-xl list-disc list-inside">
@@ -196,10 +196,10 @@ function Modal({
     case 5:
       contentToRender = (
         <div className="fixed z-10 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center min-h-screen">
-          <h1 className="text-center absolute  top-0 left-1/2 -translate-x-1/2 text-white text-[1.4em] md:text-[2em] font-semibold ">
+          <h1 className="text-center absolute  top-0 left-1/2 -translate-x-1/2 text-white text-[1.3em] md:text-[2em] font-semibold ">
             How to Change People Without Arousing Resentment
           </h1>
-          <div className="max-h-[60vh]  overflow-y-auto mt-[10vw]">
+          <div className="max-h-[60vh]  overflow-y-auto mt-[10em]">
             {/* Your scrollable content goes here */}
 
             <ul className="text-xl list-disc list-inside ">
@@ -279,6 +279,7 @@ function Modal({
     }, 1000);
     setIsShow(false);
   };
+
   return (
     <motion.div
       className="absolute top-0 left-0 right-0 bottom-0  h-full w-full  z-30 bg-[#1C1C1F]  "
@@ -295,17 +296,31 @@ function Modal({
           {contentToRender}
         </motion.div>
       </AnimatePresence>
-      <div className="fixed flex ml-[20px]  z-10">
+      <div className="fixed top-3 left-5 flex  z-10">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isShow ? 1 : 0 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="arrow"
+          className="arrow left"
           onClick={handleCLick}
         >
-          <div className="arrow-top"></div>
-          <div className="arrow-bottom"></div>
+          <svg
+            width="60px"
+            height="80px"
+            viewBox="0 0 50 80"
+            xmlSpace="preserve"
+          >
+            <polyline
+              fill="none"
+              stroke="#FFFFFF"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              points="
+	45.63,75.8 0.375,38.087 45.63,0.375 "
+            />
+          </svg>
         </motion.div>
       </div>
 

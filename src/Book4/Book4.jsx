@@ -2,49 +2,24 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import Landing from "./Landing";
 import Cont from "./Cont.JSX";
 import LocomotiveScroll from "locomotive-scroll";
-import { Route, Routes } from "react-router-dom";
+
 import { useInView } from "react-intersection-observer";
-import {
-  AnimatePresence,
-  LayoutGroup,
-  motion,
-  useAnimation,
-} from "framer-motion";
+import { AnimatePresence, useAnimation } from "framer-motion";
 import Modal from "./Modal";
 
 function Book4() {
   const scrollContainerRef = useRef(null);
-  const imageRef = useRef(null);
 
   useEffect(() => {
     // parallax and smooth scroll
     const scroll = new LocomotiveScroll({
       el: scrollContainerRef.current,
       smooth: true,
-      multiplier: 0.6, // Adjust this value to control the parallax effect.
+      reloadOnContextChange: true,
+      multiplier: 0.4,
+      easing: 0.1,
+      lerp: 0.1,
     });
-
-    // const animateImageOnScroll = () => {
-    //   const scrollPosition = scroll.scroll.instance.scroll.y;
-    //   const maxScroll = scroll.scroll.instance.limit.y;
-    //   // Calculate the movement percentage based on the scroll position
-    //   const percentage = (scrollPosition / maxScroll) * -100;
-    //   const nextPercentage = Math.max(Math.min(percentage, 0), -100);
-
-    //   const images = scrollContainerRef.current.getElementsByClassName("image");
-    //   for (const image of images) {
-    //     image.animate(
-    //       {
-    //         objectPosition: `${100 + nextPercentage}% center`,
-    //       },
-    //       { duration: 1200, fill: "forwards" } // You can choose a suitable duration for the animation
-    //     );
-    //   }
-    // };
-
-    // Add the scroll event listener to Locomotive Scroll
-    // scroll.on("scroll", animateImageOnScroll);
-
     // Clean up the Locomotive Scroll instance on component unmount
     return () => {
       scroll.destroy();
@@ -59,7 +34,7 @@ function Book4() {
   }, []);
 
   const [selectedImage, setSelectedImage] = useState(null);
-  console.log("contL,", selectedImage);
+
   const handleImageClick = (layoutId, src) => {
     setSelectedImage({ layoutId, src });
   };
@@ -127,9 +102,6 @@ function Book4() {
       ref={scrollContainerRef}
       data-scroll-container
     >
-      {/* <LayoutGroup>
-        <AnimatePresence mode="wait"> */}
-
       <Landing singleElementControls={singleElementControls} />
       <Cont
         handleImageClick={handleImageClick}
@@ -149,35 +121,6 @@ function Book4() {
         )}
       </AnimatePresence>
     </div>
-    // <div className="bg-black h-auto w-full">
-    //   <div
-    //     className="w-[200px] h-[200px] bg-[blue] mt-[650px] mb-[400px]"
-    //     ref={element1Ref}
-    //   >
-    //     Trigger Element 1
-    //   </div>
-    //   <div
-    //     className="w-[200px] h-[200px] bg-[blue] mb-[400px]"
-    //     ref={element2Ref}
-    //   >
-    //     Trigger Element 2
-    //   </div>
-    //   <div
-    //     className="w-[200px] h-[200px] bg-[blue] mb-[400px]"
-    //     ref={element3Ref}
-    //   >
-    //     Trigger Element 3
-    //   </div>
-    //   <div
-    //     className="w-[200px] h-[200px] bg-[blue] mb-[400px]"
-    //     ref={element4Ref}
-    //   >
-    //     Trigger Element 4
-    //   </div>
-    //   <motion.div className="animated-element" animate={singleElementControls}>
-    //     Animated Element
-    //   </motion.div>
-    // </div>
   );
 }
 

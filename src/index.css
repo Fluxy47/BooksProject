@@ -7,6 +7,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Hide the scrollbar, but keep the layout unaffected */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Optional: You can style the thumb and track if needed */
+::-webkit-scrollbar-thumb {
+  background: transparent; /* or any desired color */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* or any desired color */
+}
+
 .text-class {
   --max-lines: 15;
   --line-height: 1.5;
@@ -242,7 +258,7 @@ html.has-scroll-dragging {
   height: 5rem;
   width: 5rem;
   position: fixed;
-  z-index: 3;
+  z-index: 40;
   left: 50%;
   bottom: 2rem;
   transform: translateX(-50%);
@@ -343,63 +359,79 @@ html.has-scroll-dragging {
 
 .arrow {
   cursor: pointer;
-  height: 60px;
-  position: absolute;
-  width: 40px;
+  width: 50px;
+  height: 70px;
 }
 
-.arrow-top,
-.arrow-bottom {
-  background-color: #666;
-  height: 4px;
-  left: -5px;
-  position: absolute;
-  top: 50%;
-  width: 80%;
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
 }
 
-.arrow-top::after,
-.arrow-bottom::after {
-  background-color: #fff;
-  content: "";
-  height: 100%;
-  position: absolute;
-  top: 0;
-  transition: all 0.15s;
+.left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+polyline {
+  transition: all 250ms ease-in-out;
 }
 
-.arrow-top {
-  transform: rotate(-45deg);
-  transform-origin: bottom left;
+.link {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+
+  color: #9e9ba4;
+  display: inline-block;
 }
 
-.arrow-top::after {
-  left: 100%;
-  right: 0;
-  transition-delay: 0s;
+.link--kukuri {
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 0.75;
+  color: #208581;
+  overflow: hidden;
+
+  &:hover {
+    color: #f09956;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 100%;
+    top: 50%;
+    margin-top: -8px;
+    right: 0;
+    background: #f09956;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  &:hover::after {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  &::before {
+    content: attr(data-letters);
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    color: #f09956;
+    white-space: nowrap;
+    width: 0%;
+    transition: width 0.4s 0.3s;
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
 }
 
-.arrow-bottom {
-  transform: rotate(45deg);
-  transform-origin: top left;
-}
-
-.arrow-bottom::after {
-  left: 0;
-  right: 100%;
-  transition-delay: 0.15s;
-}
-
-.arrow:hover .arrow-top::after {
-  left: 0;
-  transition-delay: 0.15s;
-}
-
-.arrow:hover .arrow-bottom::after {
-  right: 0;
-  transition-delay: 0s;
-}
-
-.arrow:active {
-  transform: translateX(-50%) translateY(-50%) scale(0.9);
+.text-grad {
+  background: -webkit-linear-gradient(#eee, #f09956, #f09956);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

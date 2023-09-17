@@ -3,15 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 function Modal({ selectedImage, setSelectedImage }) {
   const { layoutId, src } = selectedImage;
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    setMousePosition({ x, y });
-  };
   const number = Number(layoutId);
 
   const bullets = [
@@ -25,14 +17,8 @@ function Modal({ selectedImage, setSelectedImage }) {
   switch (number) {
     case 1:
       contentToRender = (
-        <motion.div
-          className="fixed z-[70] h-screen w-full"
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // exit={{ opacity: 0 }}
-          // transition={{ duration: 1, delay: 0.5 }}
-        >
-          <div className="flex flex-col mt-[20px]">
+        <motion.div className="fixed z-[70] h-screen w-full">
+          <div className="flex flex-col mt-[75px] md:mt-[70px] lg:mt-0">
             <h1 className="text-[2em] md:text-[3em] text-center text-black font-semibold">
               {" "}
               Mindset: The New Psychology of Success
@@ -64,7 +50,7 @@ function Modal({ selectedImage, setSelectedImage }) {
             Growth Mindeset
           </h1>
           <div className="flex  max-h-screen   w-full items-center justify-center gap-[5px] md:gap-[40px] lg:gap-[10vh] overflow-x-auto pt-[15vh]">
-            <div className="lg:hidden min-w-[200vw] md:min-w-[90vw] h-[400px]" />
+            <div className="lg:hidden min-w-[200vw] md:min-w-[60vw] h-[400px]" />
             <div className="bg-[#440204] min-w-full md:min-w-[50%] lg:min-w-0  lg:w-[28%]   h-[500px]">
               {" "}
               <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black  font-bold">
@@ -110,7 +96,7 @@ function Modal({ selectedImage, setSelectedImage }) {
             Growth Mindeset
           </h1>
           <div className="flex  max-h-screen   w-full items-center justify-center gap-[5px] md:gap-[40px] lg:gap-[10vh] overflow-x-auto pt-[15vh]">
-            <div className="lg:hidden min-w-[200vw] md:min-w-[90vw] h-[400px]" />
+            <div className="lg:hidden min-w-[200vw] md:min-w-[60vw] h-[400px]" />
             <div className="bg-[#BF8F4C] min-w-full md:min-w-[50%] lg:min-w-0  lg:w-[28%]   h-[450px]">
               {" "}
               <h1 className="text-[1.5em] lg:text-[2.2em] text-center text-black  font-bold">
@@ -162,16 +148,19 @@ function Modal({ selectedImage, setSelectedImage }) {
             CHANGING MINDSETS
           </h1>
 
-          <p className="lg:text-2xl text-[1em] font-semibold w-[80%] mx-auto text-black">
+          <p className="lg:text-2xl text-[1em] font-semibold w-[80%] mx-auto pb-[2em] text-black">
             The key message in the book is not that fixed mindsets are bad and
             growth mindsets are good; it’s about creating awareness of the 2
             mindsets and their impact, so you can make a conscious choice on
             if/what to change in your best interest.
           </p>
 
-          <ul className="text-xl list-disc list-inside">
+          <ul className="text-xl md:text-4xl list-disc list-inside">
             {bullets.map((bullet, index) => (
-              <li key={index} className="mb-3 text-[1em] text-black">
+              <li
+                key={index}
+                className="mb-3 text-[1em] font-semibold text-black"
+              >
                 {bullet}
               </li>
             ))}
@@ -212,25 +201,34 @@ function Modal({ selectedImage, setSelectedImage }) {
         </motion.div>
       </AnimatePresence>
       <div className="fixed flex z-[71] ">
-        <motion.button
-          initial={{ letterSpacing: "0.025em" }}
-          whileHover={{ letterSpacing: "0.2em" }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-          className="text-[1.5em]  border-none bg-transparent text-black font-bold "
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isShow ? 1 : 0 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="arrow left"
           onClick={handleCLick}
         >
-          Back
-        </motion.button>
+          <svg
+            width="60px"
+            height="80px"
+            viewBox="0 0 50 80"
+            xmlSpace="preserve"
+          >
+            <polyline
+              fill="none"
+              stroke="#FFFFFF"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              points="
+	45.63,75.8 0.375,38.087 45.63,0.375 "
+            />
+          </svg>
+        </motion.div>
       </div>
 
-      <motion.img
-        src={src}
-        className="h-screen w-full"
-        style={{
-          objectFit: "cover",
-          imageRendering: "auto",
-        }}
-      />
+      <motion.img src={src} className="h-screen object-cover w-full" />
     </motion.div>
   );
 }

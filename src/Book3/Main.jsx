@@ -1,14 +1,5 @@
-import React, {
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
-import Banner from "./Center";
-import SecondPage from "./SecondPage";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
-import { TemArr2 } from "../utils/constant";
+import React, { useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Modal from "./Modal";
 import "./styles.css";
 
@@ -16,11 +7,9 @@ function Main() {
   const [flexboxPosition, setFlexboxPosition] = useState(-170); // Initialize with 0 (leftmost position)
 
   const [currentIndex, setCurrentIndex] = useState(1);
-  console.log("sakaka", currentIndex);
   const [selected, setSelected] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [rotation2, setRotation2] = useState(0);
-  const [clickCount, setClickCount] = useState(0);
   const timerRef = useRef(null);
 
   const handleRightClick = () => {
@@ -86,15 +75,6 @@ function Main() {
     }, 2500);
   }, []);
 
-  // useEffect(() => {
-  //   // This useEffect runs whenever "clicking" changes
-  //   if (clicking) {
-  //     setTimeout(() => {
-  //       setSelected(true);
-  //     }, 2000);
-  //   }
-  // }, [clicking]);
-
   const myarr = [
     { id: 1, text: "Introduction" },
     { id: 2, text: "Techniques in Handling People" },
@@ -111,9 +91,11 @@ function Main() {
 
   return (
     <motion.div
+      initial={{ borderRadius: "0.75rem" }}
+      animate={{ borderRadius: 0 }}
       layoutId="Main-Image5"
       transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.6 }}
-      className="h-screen w-full gradient overflow-hidden rounded-xl"
+      className="h-screen w-full gradient overflow-hidden "
     >
       <motion.div className="h-screen w-screen absolute   overflow-hidden m-0  ">
         <svg
@@ -179,7 +161,6 @@ function Main() {
           </motion.svg>
 
           <motion.svg
-            // animate={{ rotate: firstButton ? 90 : 0 }}
             transition={{ duration: 1 }}
             whileHover={{ scale: 1.05 }}
             onClick={handleRightClick}
@@ -223,7 +204,7 @@ function Main() {
               animate={{ x: flexboxPosition }}
               transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
             >
-              {myarr.map((item, index) => (
+              {myarr.map((item) => (
                 <motion.div
                   className="card h-[390px] w-[20em] overflow-hidden"
                   key={item.id} // Add key prop to each item

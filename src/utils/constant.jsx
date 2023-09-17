@@ -22,7 +22,7 @@ export const limitarr = [
 
 export const TemArr = [
   {
-    src: "https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg",
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg?tr=w-1200",
     srcset: `
     https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg?tr=w-400 400w,
     https://ik.imagekit.io/fluxy/DesignProject/arr1min.jpg?tr=w-800 800w,
@@ -33,7 +33,7 @@ export const TemArr = [
     text: "Introduction",
   },
   {
-    src: "https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg",
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg?tr=w-1200",
     srcset: `
     https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg?tr=w-400 400w,
     https://ik.imagekit.io/fluxy/DesignProject/arr2min.jpg?tr=w-800 800w,
@@ -44,7 +44,7 @@ export const TemArr = [
     text: "Key lessons",
   },
   {
-    src: "https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg",
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg?tr=w-1200",
     srcset: `
     https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg?tr=w-400 400w,
     https://ik.imagekit.io/fluxy/DesignProject/arr3min.jpg?tr=w-800 800w,
@@ -55,7 +55,7 @@ export const TemArr = [
     text: " Habit Loop",
   },
   {
-    src: "https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg",
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg?tr=w-1200",
     srcset: `
     https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg?tr=w-400 400w,
     https://ik.imagekit.io/fluxy/DesignProject/arr4.jpg?tr=w-800 800w,
@@ -66,7 +66,7 @@ export const TemArr = [
     text: "Creating Habits",
   },
   {
-    src: "https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg",
+    src: "https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-1200",
     srcset: `
     https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-400 400w,
     https://ik.imagekit.io/fluxy/DesignProject/arr5.jpg?tr=w-800 800w,

@@ -3,16 +3,11 @@ import Main from "../assets/Main.jpg";
 import { motion } from "framer-motion";
 import "./styles.css";
 
-//1F0322
-//#3E0A44
-
-//#6E4E49
-
-//#FDDEDE
-
 function Landing({ singleElementControls }) {
   return (
     <motion.div
+      initial={{ borderRadius: "0.75rem" }}
+      animate={{ borderRadius: 0 }}
       layoutId="Main-Image4"
       transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1.6 }}
       className="hero"
@@ -20,7 +15,7 @@ function Landing({ singleElementControls }) {
       <motion.div
         initial={{ left: "50%" }}
         animate={singleElementControls}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+        transition={{ duration: 0.2, ease: "easeInOut" }}
         className="fixed  top-1/2 -translate-x-1/2 -translate-y-1/2"
       >
         <motion.div
