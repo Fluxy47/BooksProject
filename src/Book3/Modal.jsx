@@ -14,7 +14,7 @@ function Modal({
     case 1:
       contentToRender = (
         <div className="fixed z-10  h-screen w-full">
-          <div className="flex flex-col mt-[75px] md:mt-70px">
+          <div className="flex flex-col mt-[20px]">
             <h1 className="text-[2em] md:text-[3em] text-center text-white">
               {" "}
               How to Win Friends and Influence People.
@@ -43,7 +43,7 @@ function Modal({
 
       contentToRender = (
         <div className="fixed z-10 h-screen w-full overflow-y-auto">
-          <div className="flex flex-col mt-[75px] md:mt-0 ">
+          <div className="flex flex-col ">
             <h1 className="text-white text-center  text-[2em] pt-[20px] pb-[20px] lg:pb-[15vh]">
               Techniques in Handling People
             </h1>
@@ -92,7 +92,7 @@ function Modal({
     case 3:
       contentToRender = (
         <div className="fixed z-10  h-screen w-full overflow-y-auto lg:overflow-hidden">
-          <section className="flex flex-col justify-evenly mt-[75px] md:mt-0">
+          <section className="flex flex-col justify-evenly">
             <h1 className="text-white text-[2em] mt-[30px] lg:mt-0 text-center">
               Six ways to Make People Like You
             </h1>

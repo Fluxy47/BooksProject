@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Landing from "./Landing";
-import Cont from "./Cont.JSX";
+import Cont from "./Cont";
 import LocomotiveScroll from "locomotive-scroll";
 
 import { useInView } from "react-intersection-observer";

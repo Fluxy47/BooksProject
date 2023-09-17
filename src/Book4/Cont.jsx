@@ -1,12 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Blurhash } from "react-blurhash";
+import React, { useEffect, useRef } from "react";
+
 import Ukiyo from "ukiyojs";
-import { AnimatePresence, motion } from "framer-motion";
-import book1 from "../assets/book1.jpg";
-import book2 from "../assets/book2.jpg";
-import book3 from "../assets/book3.jpg";
-import book4 from "../assets/book4.jpg";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 function Cont({
   handleImageClick,

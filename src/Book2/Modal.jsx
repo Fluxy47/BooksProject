@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import { Mtext, MImage, MHeading } from "../Book1/Animation";
 import Habitsvg from "./Habitsvg";
 

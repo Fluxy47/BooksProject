@@ -2,11 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Banner from "./Banner";
 import Lerp from "./Lerp";
 import Model from "./Model";
-import model from "../assets/model.png";
 import Card from "./Card";
 import Faster from "./Faster";
 import LocomotiveScroll from "locomotive-scroll";
-import { motion } from "framer-motion";
 
 function Limitless() {
   const myRef = useRef(null);
