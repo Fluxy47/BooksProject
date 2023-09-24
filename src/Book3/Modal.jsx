@@ -14,7 +14,7 @@ function Modal({
     case 1:
       contentToRender = (
         <div className="fixed z-10  h-screen w-full">
-          <div className="flex flex-col mt-[20px]">
+          <div className="flex flex-col mt-[75px] md:0">
             <h1 className="text-[2em] md:text-[3em] text-center text-white">
               {" "}
               How to Win Friends and Influence People.
@@ -43,7 +43,7 @@ function Modal({
 
       contentToRender = (
         <div className="fixed z-10 h-screen w-full overflow-y-auto">
-          <div className="flex flex-col ">
+          <div className="flex flex-col mt-[75px] md:0">
             <h1 className="text-white text-center  text-[2em] pt-[20px] pb-[20px] lg:pb-[15vh]">
               Techniques in Handling People
             </h1>
@@ -92,7 +92,7 @@ function Modal({
     case 3:
       contentToRender = (
         <div className="fixed z-10  h-screen w-full overflow-y-auto lg:overflow-hidden">
-          <section className="flex flex-col justify-evenly">
+          <section className="flex flex-col justify-evenly mt-[75px] md:0">
             <h1 className="text-white text-[2em] mt-[30px] lg:mt-0 text-center">
               Six ways to Make People Like You
             </h1>
@@ -282,7 +282,7 @@ function Modal({
 
   return (
     <motion.div
-      className="absolute top-0 left-0 right-0 bottom-0  h-full w-full  z-30 bg-[#1C1C1F]  "
+      className="absolute top-0 left-0 right-0 bottom-0  h-full w-full  z-[60] bg-[#1C1C1F]  "
       layoutId={currentIndex}
       transition={{ duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] }}
     >
